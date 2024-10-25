@@ -1,0 +1,92 @@
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore node modules and log files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore dependencies
+*.class
+*.war
+*.jar
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignore Python environment and package files
+venv/
+.env
+.venv
+*.egg-info/
+
+# Ignore build files
+/dist
+/build
+/out
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.exe
+
+# Ignore IDE and editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Ignore macOS files
+*.DS_Store
+
+# Ignore images and large files if not needed
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Ignore temporary files and backup files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# Ignore log files
+*.log
+*.log.*
+logs/
+
+# Ignore coverage and testing output
+coverage/
+*.cover
+*.lcov
+.nyc_output/
+
+# Ignore compiled and package files
+*.zip
+*.tar.gz
+*.rar
+
+# Ignore data files (add extensions as necessary)
+*.csv
+*.tsv
+*.sqlite3
+
+# Ignore specific environment and deployment configurations
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore various temporary files and cache
+.cache/
+tmp/
+temp/

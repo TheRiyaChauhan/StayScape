@@ -1,0 +1,244 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.container{
+    flex: 1;
+}
+
+
+/* navbar */
+.navbar{
+    height: 4.5rem;
+    background-color:rgba(255, 255, 255, 0.944) ;
+}
+
+.fa-mountain-city{
+    color: #fe424d;
+    
+}
+
+.nav-link{
+    color: black !important;
+}
+
+/* footer */
+
+.f-info-links a{
+    text-decoration: none;
+    color: white ;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+    color: white ;
+}
+
+.f-info-links , .f-info-socials , .f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.f-info{
+    text-align: center;
+    display: flex;
+    background-color: #d69b9dbd ;
+    color: white;
+   height: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+    
+     /* background-color: #fe424f2d !important; */
+}  
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+    /* background-color: #fe424f2d !important;
+    border-radius: 1rem !important; */
+    margin-top: 1rem;;
+}
+
+.card-title{
+    font-size: 1.3rem;
+    
+}
+.list-group-item{
+    background-color:#fe424f4e !important;
+    border-radius: 1rem !important;
+    margin-bottom: 0.3rem !important;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+
+}
+
+/* form - new page and edit page*/
+.heading{
+    text-align: center;
+}
+
+.add-btn{
+    background-color: #fe424d !important;
+    border-radius: 1rem !important;
+    padding: 10px 30px 10px 30px !important;
+    border: none !important;
+    margin-left: 23rem ;
+    font-size: 20px !important;
+}
+
+
+
+.custom-outline {
+    outline: 1.7px solid #f7abb1 !important; 
+    outline-offset: 3px;
+  }
+
+/* show page */
+.show-img{
+    border: 1px solid  #fe424d !important;
+    border-radius: 40% !important;
+    width: 500px !important;
+    height:600px !important ;
+}
+
+/* map */
+#map{
+    height: 50vh;
+    width:50vw;
+    border-radius: 5%;
+    border: 1px solid  #fe424d !important;
+}
+
+.scroll-container {
+    display: flex;
+    align-items: start;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.filters-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex-grow: 1;
+}
+
+.filters {
+    display: flex;
+    gap: 18px;
+}
+
+.filter {
+    min-width: 100px;
+    text-align: center;
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+.filter:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.scroll-button {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.left {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    opacity: 0.7;
+    position: absolute;
+    left: 0;
+}
+
+.left:hover{
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.right:hover{
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.right {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    opacity: 0.7;
+    position: absolute;
+    right: 0;
+}
+
+.labelRadio{
+    width: 150px;
+}
+
+/* toggle */
+.form-switch{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    height: 80px;
+}
+.form-switch:hover{
+    background-color: rgba(229, 99, 99, 0.232);
+    border-color: black;
+    cursor: pointer;
+    border-width: 2px;
+}
+.taxLabel{
+    position: absolute;
+    
+    left: 15%;
+    font-size: 18px;
+}
+.taxInput{
+    position: absolute;
+    font-size: 30px;
+    left: 70%;
+}
+
+.filters-container::-webkit-scrollbar{
+    display: none;
+}

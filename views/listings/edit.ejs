@@ -1,0 +1,91 @@
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+        <div class="row mt-2">
+            <div class="col-8 offset-2">
+                <h3 class="heading">Edit List</h3>
+                <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input name="listing[title]" value="<%= listing.title %>" type="text"
+                            class="form-control custom-outline" required>
+                            <div class="invalid-feedback">
+                                Please add a title.
+                              </div>
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="listing[description]"
+                            class="form-control custom-outline" required><%= listing.description %></textarea>
+                            <div class="invalid-feedback">
+                                Please add a description.
+                              </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <p>Old listing image</p>
+                          <img src="<%=  listing.image.url %>" alt="" width="400" height="200">
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Upload Image</label>
+                        <input name="listing[image]"  type="file"
+                            class="form-control custom-outline">
+                            
+                    </div>
+        
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <label for="price" class="form-label">Price</label>
+                            <input name="listing[price]" value="<%= listing.price %>" type="number"
+                                class="form-control custom-outline" required>
+                                <div class="invalid-feedback">
+                                    Please add a price.
+                                  </div>
+                        </div>
+        
+                        <div class="mb-3 col-md-6">
+                            <label for="location" class="form-label">Location</label>
+                            <input name="listing[country]" value="<%= listing.country %>" type="text"
+                                class="form-control custom-outline" required>
+                                <div class="invalid-feedback">
+                                    Please add a location.
+                                  </div>
+                        </div>
+        
+        
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country</label>
+                        <input name="listing[location]" value="<%= listing.location %>" type="text"
+                            class="form-control custom-outline" required>
+                            <div class="invalid-feedback">
+                                Please add a country.
+                              </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="">Categories : </label>
+                        <% const filters = ['Mountains', 'Amazing Pools', 'Castle', 'Amazing Cities', 'Arctic', 'Rooms', 'Beach', 'Camping', 'Apartment', 'Lake', 'Boats', 'Landmarks']; %>
+                        <% filters.forEach((filter, index) => { %>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input inputCheckbox" type="checkbox" id="inlineCheckbox<%= index + 1 %>" value="<%= filter %>" name="listing[filters][]" <%= listing.filters.includes(filter) ? 'checked' : '' %>>
+                                <label class="form-check-label" for="inlineCheckbox<%= index + 1 %>"><%= filter %></label>
+                            </div>
+                        <% }); %>
+                    </div>
+        
+        
+         
+                    <div class="text-center">
+                        <button class="btn btn-outline-danger mt-2 mb-3 btn-lg ">EDIT</button>
+                    </div>
+
+        
+                </form>
+            </div>
+        </div>
+       
+    </body>
